@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="daum" class="com.sist.daum.DaumManager"
+		p:key="61ffeb36aeadc7fdf0fc2e572f1b462c"
+	/>
+	<bean id="mc" class="com.sist.container.MainClass"
+		p:dm-ref="daum"
+	/>
+		
+	
+
+</beans>
