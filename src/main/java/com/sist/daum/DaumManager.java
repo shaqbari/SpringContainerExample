@@ -50,7 +50,7 @@ public class DaumManager {
 		
 		try {
 			//String key="61ffeb36aeadc7fdf0fc2e572f1b462c";//중요정보는 xml로 숨겨야 한다.
-			URL url=new URL("https://apis.daum.net/search/blog/?apikey="+key
+			URL url=new URL("https://apis.daum.net/search/blog?apikey="+key
 					+"&result=20"
 					+"&output=xml"
 					+"&pageno="+page
@@ -72,6 +72,7 @@ public class DaumManager {
 			
 		} catch (Exception e) {
 			System.out.println("DaumManager daumReviewData() : "+e.getMessage());
+			e.printStackTrace();
 		}
 		
 		return review;		
@@ -98,8 +99,9 @@ public class DaumManager {
 		}
 	}
 	
-	/*public static void main(String[] args) {
+	public static void main(String[] args) {
 		DaumManager dm=new DaumManager();
-		dm.daumReviewSave("원더우먼");
-	}*/
+		dm.setKey("61ffeb36aeadc7fdf0fc2e572f1b462c");
+		dm.daumReviewSave("고스트베이비");
+	}
 }
